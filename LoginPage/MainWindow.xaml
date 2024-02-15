@@ -1,0 +1,88 @@
+﻿<Window x:Class="LoginPage.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LoginPage"
+        mc:Ignorable="d"
+               Title="LoginPage"
+        ResizeMode="CanMinimize"
+        Height="480" Width="560">
+    <Grid >
+        <Grid.Background>
+            <ImageBrush Stretch="Fill" 
+                ImageSource="D:\Das\2 C#\@ Dot.Net misollari\WPF\LoginPage\LoginPage\Image\foto-1.jpg"/>
+
+        </Grid.Background>
+        <Border Background="Black"
+                 Height="250" Width="310"
+                CornerRadius="15"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Center"
+                Margin="220,10,0,0"
+                Opacity="0.3">
+        </Border>
+
+        <Border 
+                Height="240" Width="300"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Center"
+                Margin="220,15,0,0">
+
+            <StackPanel Margin="0">
+                <Label Content="Login"
+                       Foreground="White"
+                       FontSize="22" 
+                       HorizontalAlignment="Center"
+                       Margin="0 0 0 0" />
+                <Label Content="Email"
+                       Foreground="White"
+                       FontSize="18" 
+                       Margin="0 -6"/>
+                <TextBox x:Name="tbEmail" 
+                       FontSize="20"
+                       Margin="0 3"
+                       Foreground="White"
+                       Background="Transparent"  />
+                <Label Content="Password"
+                       Foreground="White"
+                       FontSize="18"  
+                       Margin="0 -4"/>
+                <PasswordBox x:Name="pbPassword" 
+                       FontSize="20"
+                       Background="Transparent"
+                       Foreground="White"  />
+
+                <Grid Margin="20 0 0 0" 
+                    HorizontalAlignment="Left"
+                      Width="250">
+                    <RadioButton x:Name="rbIsMale"
+                             Margin="0 15 0 15" 
+                             Content="Male"
+                             FontSize="15"
+                             Foreground="White" 
+                             VerticalContentAlignment="Center"/>
+
+                    <RadioButton Margin="100 15 0 15" 
+                             Content="Famele"
+                             FontSize="15"
+                             VerticalContentAlignment="Center"
+                             HorizontalAlignment="Right"
+                             Foreground="White" />
+
+                </Grid>
+                <Border Height="35" Width="150"
+                             MouseLeftButtonDown="SaveBorderMouseDown"
+                             Background="#00ABB3"
+                             CornerRadius="10"
+                             Margin="0 3"  >
+                    <Label  Content="Save"
+                             Foreground="White"
+                             FontSize="18"
+                             HorizontalAlignment="Center"/>
+                </Border>
+
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
